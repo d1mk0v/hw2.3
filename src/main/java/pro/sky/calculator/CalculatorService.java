@@ -1,7 +1,9 @@
 package pro.sky.calculator;
 
 public interface CalculatorService {
-    public String hello();
+    String hello();
+    String plus(double num1, double num2);
+    String minus(double num1, double num2);
+    String multiply(double num1, double num2);
 
-    String answerHello(String userName);
 }
