@@ -1,7 +1,10 @@
 package pro.sky.calculator;
 
 public interface CalculatorService {
-    public String hello();
+    String hello();
+    String plus(Double num1, Double num2);
+    String minus(Double num1, Double num2);
+    String multiply(Double num1, Double num2);
+    String divide(Double num1, Double num2);
 
-    String answerHello(String userName);
 }
