@@ -2,15 +2,9 @@ package pro.sky.calculator.services;
 
 import exception.DivisionByZeroException;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.web.server.LocalServerPort;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class CalculatorServiceImplTest {
-
-    @LocalServerPort
-    private int port;
-
 
     @Test
     void hello() {
