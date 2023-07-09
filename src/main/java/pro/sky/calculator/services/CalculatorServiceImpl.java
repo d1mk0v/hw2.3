@@ -1,5 +1,6 @@
 package pro.sky.calculator.services;
 
+import exception.DivisionByZeroException;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -41,7 +42,7 @@ public class CalculatorServiceImpl implements CalculatorService {
             return "Введите корректные данные";
         }
         if (num2 == 0) {
-            throw  new IllegalArgumentException("На ноль делить нельзя!!!");
+            throw new DivisionByZeroException("На ноль делить нельзя!!!");
         } else {
             return num1 + " / " + num2 + " = " + quot;
         }
