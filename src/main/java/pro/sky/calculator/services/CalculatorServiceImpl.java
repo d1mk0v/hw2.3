@@ -41,7 +41,7 @@ public class CalculatorServiceImpl implements CalculatorService {
             return "Введите корректные данные";
         }
         if (num2 == 0) {
-            return "На ноль делить нельзя!!!";
+            throw  new IllegalArgumentException("На ноль делить нельзя!!!");
         } else {
             return num1 + " / " + num2 + " = " + quot;
         }
