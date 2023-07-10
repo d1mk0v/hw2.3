@@ -1,6 +1,6 @@
 package pro.sky.calculator.services;
 
-import exception.DivisionByZeroException;
+import pro.sky.calculator.exception.DivisionByZeroException;
 import org.springframework.stereotype.Service;
 
 @Service

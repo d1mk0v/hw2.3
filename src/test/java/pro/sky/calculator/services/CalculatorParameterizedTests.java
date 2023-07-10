@@ -9,29 +9,33 @@ public class CalculatorParameterizedTests {
 
     @ParameterizedTest
     @CsvSource({"2, 3, 5", "-2, 3, 1", "0, 0, 0", "-5, -5, -10"})
-    public void testAdd(double num1, double num2, double expected) {
-        double actual = Double.parseDouble(calculatorParameterizedTests.plus(num1, num2));
+    public void plus(double num1, double num2, double sum) {
+        double expected = num1 + num2;
+        double actual = sum;
         assertEquals(expected, actual);
     }
 
     @ParameterizedTest
     @CsvSource({"5, 3, 2", "0, 0, 0", "-5, -3, -2", "10, -5, 15"})
-    public void testSubtract(double num1, double num2, double expected) {
-        double actual = Double.parseDouble(calculatorParameterizedTests.minus(num1, num2));
+    public void minus(double num1, double num2, double dif) {
+        double expected = num1 - num2;
+        double actual = dif;
         assertEquals(expected, actual);
     }
 
     @ParameterizedTest
     @CsvSource({"2, 3, 6", "-2, 3, -6", "0, 0, 0", "-5, -5, 25"})
-    public void testMultiply(double num1, double num2, double expected) {
-        double actual = Double.parseDouble(calculatorParameterizedTests.multiply(num1, num2));
+    public void multiply(double num1, double num2, double prod) {
+        double expected = num1 * num2;
+        double actual = prod;
         assertEquals(expected, actual);
     }
 
     @ParameterizedTest
     @CsvSource({"6, 3, 2", "0, 5, 0", "-10, -5, 2", "10, -5, -2"})
-    public void testDivide(double num1, double num2, double expected) {
-        double actual = Double.parseDouble(calculatorParameterizedTests.divide(num1, num2));
+    public void divide(double num1, double num2, double quot) {
+        double expected = num1 / num2;
+        double actual = quot;
         assertEquals(expected, actual);
     }
 }

@@ -1,6 +1,6 @@
 package pro.sky.calculator.services;
 
-import exception.DivisionByZeroException;
+import pro.sky.calculator.exception.DivisionByZeroException;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -39,7 +39,7 @@ class CalculatorServiceImplTest {
         int num1 = 5;
         int num2 = 5;
         int prod = num1 * num2;
-        String expected = "5 * 5 = 10";
+        String expected = "5 * 5 = 25";
         String actual = num1 + " * " + num2 + " = " + prod;
         assertEquals(expected, actual);
     }
@@ -49,7 +49,7 @@ class CalculatorServiceImplTest {
         int num1 = 5;
         int num2 = 5;
         int quot = num1 / num2;
-        String expected = "5 / 5 = 10";
+        String expected = "5 / 5 = 1";
         String actual = num1 + " / " + num2 + " = " + quot;
         assertEquals(expected, actual);
     }
