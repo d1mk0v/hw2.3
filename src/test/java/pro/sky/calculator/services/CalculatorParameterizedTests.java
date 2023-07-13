@@ -32,7 +32,7 @@ public class CalculatorParameterizedTests {
     }
 
     @ParameterizedTest
-    @CsvSource({"4.0, 2.0, 4.0 / 2.0 = 2.0", "-2.0, 2.0, -2.0 / 2.0 = -1.0", "-6.0, -3.0, -6.0 / -3.0 = 2.0",  "0.0, 0.0, 0.0 - 0.0 = 0.0"})
+    @CsvSource({"4.0, 2.0, 4.0 / 2.0 = 2.0", "-2.0, 2.0, -2.0 / 2.0 = -1.0", "-6.0, -3.0, -6.0 / -3.0 = 2.0",  "0.0, 0.0, 0.0 / 0.0 = 0.0"})
     void divide(double num1, double num2, String expected) {
         calculatorServiceImpl = new CalculatorServiceImpl();
         String actual = calculatorServiceImpl.divide(num1, num2);
